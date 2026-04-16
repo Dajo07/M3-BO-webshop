@@ -15,6 +15,31 @@ header {
     border: rgb(0, 0, 0) solid 1px;
 }
 
+.header-button {
+    cursor: pointer;
+    padding: 10px;
+    height: 50px;
+    width: 100px;
+    border: 1px solid rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+}
+
+.header-button:hover {
+    background-color: #333333;
+    color: rgb(255, 255, 255);
+}
+
+a:link{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+a:visited{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
 .cta {
     border: 1px solid rgb(0, 0, 0);
     width: 100%;
@@ -38,12 +63,13 @@ header {
     width: 100px;
     border: 1px solid rgb(0, 0, 0);
     border-color: rgb(255, 255, 255);
-    color: rgb(128, 128, 128);
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
 }
 
 .cta-button:hover {
-    background-color: rgb(253, 255, 253);
-    color: rgb(0, 0, 0);
+    background-color: #333333;
+    color: rgb(255, 255, 255);
 }
 
 .uitgelicht {
@@ -77,6 +103,7 @@ header {
     padding: 10px;
     border-color: rgb(255, 255, 255);
     border: 1px solid rgb(255, 255, 255);
+    color: white;
 }
 
 .product-cat1 {
@@ -133,4 +160,33 @@ header {
 
 .product-cat14 {
     flex: 20%;
+}
+
+
+.Winkelwagen {
+    background-color: #232323;
+    color: white;
+    text-align: center;
+}
+
+th {
+    padding: 10px;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+footer {
+    background-color: #232323;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer2 {
+    position:absolute;
+    bottom:0;
+    width: 100%;
+    background-color: #232323;
+    color: white;
+    text-align: center;
+    padding: 10px;
 }

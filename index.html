@@ -8,117 +8,138 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
-<header>
-    <h1>Cat web shop</h1>
-
-    <body>
-        <section class="cta">
-            <img class="cta-img" src="img/funny-cat.png" alt="Funny cat">
-            <button class="cta-button">koop hier</button>
-        </section>
-
-        <section>
-            <h2 class="uitgelicht">uitgelicht</h2>
-            <div class="filters">
-                <input id="zoek" type="text" placeholder="Zoek een product...">
-                <button onclick="filterproducten('alles')">Alles</button>
-                <button onclick="filterproducten('small')">small cat</button>
-                <button onclick="filterproducten('medium')">medium cat</button>
-                <button onclick="filterproducten('large')">large cat</button>
-                <button onclick="filterproducten('deals')">deals</button>
-            </div>
-
-            <ul class="products">
 
 
-                <li class="product" data-categorie="large">
-                    <img class="product-cat1" src="img/big-cat-scared.webp" alt="James">
-                    <h3 class="producttitle">James</h3>
-                    <p>Price: €40</p>
-                </li>
+<body>
+    <header>
+        <h1>Cat web shop</h1>
+        <button class="header-button"><a href="cart.html">Winkelwagen</a></button>
+    </header>
+    <section class="cta">
+        <img class="cta-img" src="img/funny-cat.png" alt="Funny cat">
+        <button class="cta-button" onclick="addToCart('Cadillac', 20)">koop hier</button>
+    </section>
 
-                <li class="product" data-categorie="small">
-                    <img class="product-cat2" src="img/bigfootjinx-1.jpg" alt="jinx">
-                    <h3 class="producttitle">Jinx</h3>
-                    <p>Price: €20</p>
-                </li>
+    <section>
+        <h2 class="uitgelicht">uitgelicht</h2>
+        <div class="filters">
+            <input id="zoek" type="text" placeholder="Zoek een product...">
+            <button onclick="filterproducten('alles')">Alles</button>
+            <button onclick="filterproducten('small')">small cat</button>
+            <button onclick="filterproducten('medium')">medium cat</button>
+            <button onclick="filterproducten('large')">large cat</button>
+            <button onclick="filterproducten('deals')">deals</button>
+        </div>
 
-                <li class="product" data-categorie="medium">
-                    <img class="product-cat3" src="img/mr-shronkle-scrimblo.jpg" alt="mr shronkle scrimblo">
-                    <h3 class="producttitle">Mr Shronkle</h3>
-                    <p>Price: €30</p>
-                </li>
+        <ul class="products">
 
-                <li class="product" data-categorie="medium">
-                    <img class="product-cat4" src="img/angry-cat.webp" alt="oranje">
-                    <h3 class="producttitle">Oranje</h3>
-                    <p>Price: €20</p>
-                </li>
 
-                <li class="product" data-categorie="medium">
-                    <img class="product-cat5" src="img/1000-yard-stare-cat.jpg" alt="Long Chicken">
-                    <h3 class="producttitle">Long Chicken</h3>
-                    <p>Price: €20</p>
-                </li>
+            <li class="product" data-categorie="large">
+                <img class="product-cat1" src="img/big-cat-scared.webp" alt="James">
+                <h3 class="producttitle">James</h3>
+                <p>Price: €40</p>
+                <button onclick="addToCart('James', 40)">Voeg toe aan winkelwagen</button>
+            </li>
 
-                <li class="product" data-categorie="large">
-                    <img class="product-cat6" src="img/Larry.png" alt="Larry">
-                    <h3 class="producttitle">Larry</h3>
-                    <p>Price: €80</p>
-                </li>
+            <li class="product" data-categorie="small">
+                <img class="product-cat2" src="img/bigfootjinx-1.jpg" alt="jinx">
+                <h3 class="producttitle">Jinx</h3>
+                <p>Price: €20</p>
+                <button onclick="addToCart('Jinx', 20)">Voeg toe aan winkelwagen</button>
+            </li>
 
-                <li class="product" data-categorie="small">
-                    <img class="product-cat7" src="img/goofy-ahh-fake-cat.webp" alt="Stopcontact">
-                    <h3 class="producttitle">Stopcontact</h3>
-                    <p>Price: €10</p>
-                </li>
+            <li class="product" data-categorie="medium">
+                <img class="product-cat3" src="img/mr-shronkle-scrimblo.jpg" alt="mr shronkle scrimblo">
+                <h3 class="producttitle">Mr Shronkle</h3>
+                <p>Price: €30</p>
+                <button onclick="addToCart('Mr Shronkle scrimblo', 30)">Voeg toe aan winkelwagen</button>
+            </li>
 
-                <li class="product" data-categorie="medium">
-                    <img class="product-cat8" src="img/goofy-Ahh-tired-cat.webp" alt="Geeked">
-                    <h3 class="producttitle">Geeked</h3>
-                    <p>Price: €10</p>
-                </li>
+            <li class="product" data-categorie="medium">
+                <img class="product-cat4" src="img/angry-cat.webp" alt="oranje">
+                <h3 class="producttitle">Oranje</h3>
+                <p>Price: €20</p>
+                <button onclick="addToCart('Oranje', 20)">Voeg toe aan winkelwagen</button>
+            </li>
 
-                <li class="product" data-categorie="medium">
-                    <img class="product-cat9" src="img/lick-cat-1.jpg" alt="Renault">
-                    <h3 class="producttitle">Renault</h3>
-                    <p>Price: €20</p>
-                </li>
+            <li class="product" data-categorie="medium">
+                <img class="product-cat5" src="img/1000-yard-stare-cat.jpg" alt="Long Chicken">
+                <h3 class="producttitle">Long Chicken</h3>
+                <p>Price: €20</p>
+                <button onclick="addToCart('Long Chicken', 20)">Voeg toe aan winkelwagen</button>
+            </li>
 
-                <li class="product" data-categorie="small">
-                    <img class="product-cat10" src="img/scared-cat-1.jpg" alt="William">
-                    <h3 class="producttitle">William</h3>
-                    <p>Price: €10</p>
-                </li>
+            <li class="product" data-categorie="large">
+                <img class="product-cat6" src="img/Larry.png" alt="Larry">
+                <h3 class="producttitle">Larry</h3>
+                <p>Price: €80</p>
+                <button onclick="addToCart('Larry', 80)">Voeg toe aan winkelwagen</button>
+            </li>
 
-                <li class="product" data-categorie="small">
-                    <img class="product-cat11" src="img/wierd-ass-cat.jpg" alt="Xenomorph">
-                    <h3 class="producttitle">Xenomorph</h3>
-                    <p>Price: €20</p>
-                </li>
+            <li class="product" data-categorie="small">
+                <img class="product-cat7" src="img/goofy-ahh-fake-cat.webp" alt="Stopcontact">
+                <h3 class="producttitle">Stopcontact</h3>
+                <p>Price: €10</p>
+                <button onclick="addToCart('Stopcontact', 10)">Voeg toe aan winkelwagen</button>
+            </li>
 
-                <li class="product" data-categorie="deals">
-                    <img class="product-cat12" src="img/priest-cat.jpg" alt="priest cat">
-                    <h3 class="producttitle">church Cat deal 1 + 3 free</h3>
-                    <p>Price: €30</p>
-                </li>
+            <li class="product" data-categorie="medium">
+                <img class="product-cat8" src="img/goofy-Ahh-tired-cat.webp" alt="Geeked">
+                <h3 class="producttitle">Geeked</h3>
+                <p>Price: €10</p>
+                <button onclick="addToCart('Geeked', 10)">Voeg toe aan winkelwagen</button>
+            </li>
 
-                <li class="product" data-categorie="medium">
-                    <img class="product-cat13" src="img/priest-cat-2.jpg" alt="priest cat">
-                    <h3 class="producttitle">priest Cat</h3>
-                    <p>Price: €20</p>
-                </li>
+            <li class="product" data-categorie="medium">
+                <img class="product-cat9" src="img/lick-cat-1.jpg" alt="Renault">
+                <h3 class="producttitle">Renault</h3>
+                <p>Price: €20</p>
+                <button onclick="addToCart('Renault', 20)">Voeg toe aan winkelwagen</button>
+            </li>
 
-                <li class="product" data-categorie="medium">
-                    <img class="product-cat14" src="img/funny-cat.png" alt="Cadillac">
-                    <h3 class="producttitle">Cadillac</h3>
-                    <p>Price: €20</p>
-                </li>
+            <li class="product" data-categorie="small">
+                <img class="product-cat10" src="img/scared-cat-1.jpg" alt="William">
+                <h3 class="producttitle">William</h3>
+                <p>Price: €10</p>
+                <button onclick="addToCart('William', 10)">Voeg toe aan winkelwagen</button>
+            </li>
 
-            </ul>
+            <li class="product" data-categorie="small">
+                <img class="product-cat11" src="img/wierd-ass-cat.jpg" alt="Xenomorph">
+                <h3 class="producttitle">Xenomorph</h3>
+                <p>Price: €20</p>
+                <button onclick="addToCart('Xenomorph', 20)">Voeg toe aan winkelwagen</button>
+            </li>
 
-        </section>
-        <script src="script.js"></script>
-    </body>
+            <li class="product" data-categorie="deals">
+                <img class="product-cat12" src="img/priest-cat.jpg" alt="church deal">
+                <h3 class="producttitle">church Cat deal 1 + 3 free</h3>
+                <p>Price: €30</p>
+                <button onclick="addToCart('church deal', 30)">Voeg toe aan winkelwagen</button>
+            </li>
+
+            <li class="product" data-categorie="medium">
+                <img class="product-cat13" src="img/priest-cat-2.jpg" alt="priest cat">
+                <h3 class="producttitle">priest Cat</h3>
+                <p>Price: €20</p>
+                <button onclick="addToCart('priest cat', 20)">Voeg toe aan winkelwagen</button>
+            </li>
+
+            <li class="product" data-categorie="medium">
+                <img class="product-cat14" src="img/funny-cat.png" alt="Cadillac">
+                <h3 class="producttitle">Cadillac</h3>
+                <p>Price: €20</p>
+                <button onclick="addToCart('Cadillac', 20)">Voeg toe aan winkelwagen</button>
+            </li>
+
+        </ul>
+
+    </section>
+    <footer>
+        Dajo Hofstee - 2026
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 
 </html>
